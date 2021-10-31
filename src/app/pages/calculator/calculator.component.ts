@@ -35,7 +35,10 @@ export class CalculatorComponent implements OnInit {
   ngOnInit(): void {}
 
   calc() {
-    this.insuranceAndHousingPerMonth = this.calcInsuranceAndHousing(this.salaryMonthly);
+    this.insuranceAndHousingPerMonth = this.calcInsuranceAndHousing(
+      this.salaryMonthly,
+      this.housingK / 100
+    );
     const beTaxedNumber =
       this.total -
       START_CALC_TAX_NUMBER -
@@ -45,13 +48,9 @@ export class CalculatorComponent implements OnInit {
     this.tax = calcTax(beTaxedNumber);
   }
 
-  private calcInsuranceAndHousing(salaryMonthly: number) {
+  private calcInsuranceAndHousing(salaryMonthly: number, housingK: number) {
     return (
-      salaryMonthly *
-      (ENDOWMENT_INSURANCE +
-        MEDICAL_INSURANCE +
-        UNEMPLOYMENT_INSURANCE +
-        HOUSING_ACCUMULATION_FUNDS)
+      salaryMonthly * (ENDOWMENT_INSURANCE + MEDICAL_INSURANCE + UNEMPLOYMENT_INSURANCE + housingK)
     );
   }
 }

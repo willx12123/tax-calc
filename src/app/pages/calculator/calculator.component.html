@@ -43,20 +43,20 @@
       <div>
         <b>五险一金</b>
       </div>
-      <div>{{ insuranceAndHousingPerMonth }} * 12</div>
-      <div>{{ insuranceAndHousingPerYear }}/年</div>
+      <div>{{ insuranceAndHousingPerMonth.toFixed(2) }} * 12</div>
+      <div>{{ insuranceAndHousingPerYear.toFixed(2) }}/年</div>
 
       <div>
         <b>税收</b>
       </div>
-      <div>{{ tax }}</div>
+      <div>{{ tax.toFixed(2) }}</div>
       <div></div>
 
       <div>
         <b>实际到手</b>
       </div>
-      <div>{{ actuallyGet }}</div>
-      <div></div> 
+      <div>{{ actuallyGet.toFixed(2) }}</div>
+      <div></div>
     </div>
   </mat-card-content>
 </mat-card>
