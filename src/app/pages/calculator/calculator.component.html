@@ -1,4 +1,4 @@
-<mat-card class="wrapper">
+<mat-card class="wrapper form">
   <mat-card-header>
     <mat-card-title>个人所得税计算器</mat-card-title>
     <mat-card-subtitle>所有操作将不进行联网，放心使用</mat-card-subtitle>
@@ -7,27 +7,56 @@
     <div class="inputs">
       <mat-form-field class="input" appearance="outline">
         <mat-label>年总收入</mat-label>
-        <input matInput [(ngModel)]="total" />
+        <input matInput type="number" [(ngModel)]="total" />
         <mat-hint>现金收入</mat-hint>
       </mat-form-field>
 
       <mat-form-field class="input" appearance="outline">
         <mat-label>月薪</mat-label>
-        <input matInput [(ngModel)]="salaryMonthly" />
+        <input matInput type="number" [(ngModel)]="salaryMonthly" />
         <mat-hint>用于计算五险一金</mat-hint>
       </mat-form-field>
 
-      <mat-form-field class="input" appearance="outline" floatLabel="always">
+      <mat-form-field class="input housing-k" appearance="outline" floatLabel="always">
         <mat-label>公积金基数</mat-label>
         <input class="housing-k" matInput type="number" [(ngModel)]="housingK" />
         <span matSuffix>%</span>
+      </mat-form-field>
+
+      <mat-form-field class="input" appearance="outline">
+        <mat-label>专项扣除</mat-label>
+        <input matInput type="number" [(ngModel)]="specialReduce" />
       </mat-form-field>
     </div>
   </mat-card-content>
 
   <mat-card-actions>
     <div class="actions">
-      <button mat-raised-button color="primary">计算</button>
+      <button mat-raised-button color="primary" (click)="calc()">计算</button>
     </div>
   </mat-card-actions>
+</mat-card>
+
+<mat-card class="wrapper result">
+  <mat-card-content>
+    <div class="panel">
+      <div>
+        <b>五险一金</b>
+      </div>
+      <div>{{ insuranceAndHousingPerMonth }} * 12</div>
+      <div>{{ insuranceAndHousingPerYear }}/年</div>
+
+      <div>
+        <b>税收</b>
+      </div>
+      <div>{{ tax }}</div>
+      <div></div>
+
+      <div>
+        <b>实际到手</b>
+      </div>
+      <div>{{ actuallyGet }}</div>
+      <div></div> 
+    </div>
+  </mat-card-content>
 </mat-card>
