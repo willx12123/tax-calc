@@ -6,6 +6,8 @@ const taxLevel2 = 14.4 * Money.W;
 const taxLevel2K = 0.1;
 const taxLevel3 = 30 * Money.W;
 const taxLevel3K = 0.2;
+const taxLevel4 = 42 * Money.W;
+const taxLevel4K = 0.25;
 
 export function calcTax(beTaxedNumber: number) {
   let ret = 0;
@@ -26,6 +28,14 @@ export function calcTax(beTaxedNumber: number) {
       ret = taxLevel1 * taxLevel1K;
       ret += (taxLevel2 - taxLevel1) * taxLevel2K;
       ret += (beTaxedNumber - taxLevel2) * taxLevel3K;
+      break;
+    }
+    
+    if (beTaxedNumber <= taxLevel4) {
+      ret = taxLevel1 * taxLevel1K;
+      ret += (taxLevel2 - taxLevel1) * taxLevel2K;
+      ret += (taxLevel3 - taxLevel2) * taxLevel3K;
+      ret += (beTaxedNumber - taxLevel3) * taxLevel4K;
       break;
     }
   } while (0);
