@@ -140,6 +140,15 @@
   dependencies:
     tslib "^2.2.0"
 
+"@angular/cdk@12.2.12":
+  version "12.2.12"
+  resolved "https://registry.npmmirror.com/@angular/cdk/download/@angular/cdk-12.2.12.tgz?cache=0&sync_timestamp=1635484260771&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2F%40angular%2Fcdk%2Fdownload%2F%40angular%2Fcdk-12.2.12.tgz#61dda37d8900275790da623c1f83daa1e859c795"
+  integrity sha1-Yd2jfYkAJ1eQ2mI8H4PaoehZx5U=
+  dependencies:
+    tslib "^2.2.0"
+  optionalDependencies:
+    parse5 "^5.0.0"
+
 "@angular/cli@~12.2.10":
   version "12.2.12"
   resolved "https://registry.npmmirror.com/@angular/cli/download/@angular/cli-12.2.12.tgz?cache=0&sync_timestamp=1635484697516&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2F%40angular%2Fcli%2Fdownload%2F%40angular%2Fcli-12.2.12.tgz#ce4eeb8889eecb51a1a2af4fb69d3d2ce11728dd"
@@ -210,6 +219,13 @@
   version "12.2.12"
   resolved "https://registry.npmmirror.com/@angular/forms/download/@angular/forms-12.2.12.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2F%40angular%2Fforms%2Fdownload%2F%40angular%2Fforms-12.2.12.tgz#82c6d03d58406f7243ce6a2c5b6f6026b6b084d0"
   integrity sha1-gsbQPVhAb3JDzmosW29gJrawhNA=
+  dependencies:
+    tslib "^2.2.0"
+
+"@angular/material@12.2.12":
+  version "12.2.12"
+  resolved "https://registry.npmmirror.com/@angular/material/download/@angular/material-12.2.12.tgz#66add3fb649422128b3273c10b9b7cce2f77e0cf"
+  integrity sha1-Zq3T+2SUIhKLMnPBC5t8zi934M8=
   dependencies:
     tslib "^2.2.0"
 
@@ -5602,6 +5618,11 @@ parse5-sax-parser@^6.0.1:
   integrity sha1-mLTTZrWyZqfNkLS1iQZmeviC2ro=
   dependencies:
     parse5 "^6.0.1"
+
+parse5@^5.0.0:
+  version "5.1.1"
+  resolved "https://registry.nlark.com/parse5/download/parse5-5.1.1.tgz#f68e4e5ba1852ac2cadc00f4555fff6c2abb6178"
+  integrity sha1-9o5OW6GFKsLK3AD0VV//bCq7YXg=
 
 parse5@^6.0.1:
   version "6.0.1"
