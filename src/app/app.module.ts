@@ -8,7 +8,6 @@ import { MatInputModule } from "@angular/material/input";
 import { MatButtonModule } from "@angular/material/button";
 import { MatIconModule } from "@angular/material/icon";
 
-import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 
 import { CalculatorComponent } from "./pages/calculator/calculator.component";
@@ -17,7 +16,6 @@ import { CalculatorComponent } from "./pages/calculator/calculator.component";
   declarations: [AppComponent, CalculatorComponent],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule,
     MatCardModule,
